@@ -1,29 +1,108 @@
-# Create T3 App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# BlockGov
 
-## What's next? How do I make an app with this?
+## Overview
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+BlockGov is designed to provide an intuitive and transparent way to browse, search, and interact with Project Catalyst proposals. The platform enables users to connect their Cardano wallets, authenticate through social media, and post content related to governance proposals.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### MVP Features (v0.01)
 
-## Learn More
+- **Wallet Connect Sign-Up**: Connect Cardano wallets with social media authentication (Twitter, Discord, Medium)
+- **Username Management**: Use social media handles or create custom usernames
+- **Proposal Explorer**: Browse and search through Project Catalyst proposals
+- **Content Posting**: Create posts with text and media (audio, video, documents)
+- **Secure Wallet Disconnection**: Safely disconnect wallet connections
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Future Features (v0.02+)
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- **Language Selection**: Multilingual UI support
+- **Advanced Governance Tools**: On-chain voting and proposal creation
+- **Midnight Network Integration**: Privacy-preserving features
+- **Identity Layer Integration**: Atala PRISM or similar DID systems
+- **Proposal Rating/Engagement**: Like, comment, and rate proposals
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Wallet Connection & Authentication
 
-## How do I deploy this?
+1. User visits the platform
+2. Clicks "Connect Wallet" button
+3. Connects Cardano wallet (Nami, Eternl, etc.)
+4. Authenticates with social media account
+5. Chooses username (social handle or custom)
+6. Account created and linked to wallet address
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Proposal Browsing
+
+1. Home page displays featured proposals
+2. Users can search and filter proposals
+3. Click on proposal to view full details
+4. View title, category, description, team, funding goal, and media
+
+### Content Posting
+
+1. User clicks "New Post" button
+2. Pastes Project Catalyst proposal link
+3. Loads proposal data automatically
+4. Adds text content and optional media
+5. Posts are linked to the specific proposal
+6. Other users can view and interact with posts
+
+### Code Style
+
+This project uses:
+- TypeScript for type safety
+- ESLint for code linting
+- Prettier for code formatting
+- Tailwind CSS for styling
+
+## Contributing
+
+We welcome contributions from the Cardano community! Please read our contributing guidelines before submitting pull requests.
+
+## Roadmap
+
+### v0.01 (Demo Release) - August 2025
+- [x] Project setup and basic structure
+- [ ] Wallet connection integration
+- [ ] Social media authentication
+- [ ] Proposal explorer interface
+- [ ] Content posting functionality
+- [ ] Basic user management
+
+### v0.02 (Post-Funding)
+- [ ] Advanced governance tools
+- [ ] On-chain voting capabilities
+- [ ] Proposal creation interface
+- [ ] Enhanced engagement features
+- [ ] Midnight network integration
+
+### Future Goals
+- Open source the platform for community contributions
+- Create job opportunities for BlockPrints community developers
+- Collaborate with Gimbalabs on advanced features
+
+## Team
+
+- **Frontend Developer**: Emmanuel
+- **Backend Developer**: Miles and Emmanuel  
+- **Blockchain Developer**: Emmanuel
+- **UI/UX Designer**: Jethro
+- **Project Manager**: Emmanuel
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For support and questions:
+- Join our Discord community
+- Open an issue on GitHub
+- Contact the development team
+
+## Acknowledgments
+
+- Project Catalyst community for inspiration
+- Cardano ecosystem for blockchain infrastructure
+- T3 Stack for the development foundation
