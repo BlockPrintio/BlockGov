@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme: white background, navy text */
+    --background: 0 0% 100%;          /* white */
+    --foreground: 220 40% 14%;        /* navy text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 14%;
+
+    --muted: 220 20% 96%;             /* very light blue/gray */
+    --muted-foreground: 220 15% 40%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 14%;
+
+    --primary: 215 65% 45%;           /* navy primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 205 80% 48%;         /* azure accent */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 200 95% 45%;            /* cyan accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 90%;            /* light border */
+    --input: 220 14% 90%;
+    --ring: 215 65% 45%;
+    --shadow: 220 40% 14%;
+  }
+}
+
+/* Utility classes are generated from tailwind.config.ts. No custom @apply mappings needed. */
