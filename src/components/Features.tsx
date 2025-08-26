@@ -39,33 +39,31 @@ const Features = () => {
     <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Empowering Innovation Through
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              Collaboration
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 tracking-tight">
+            Powerful tools for
+            <span className="block bg-gradient-hero bg-clip-text text-transparent">community governance</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A platform for innovators, entrepreneurs, and changemakers to share ideas and build the future.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Discover proposals, analyze impact, and participate with confidence.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm"
+            <Card
+              key={index}
+              className="group border-border/60 bg-card/40 backdrop-blur-lg hover:bg-card/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant"
             >
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-primary shadow-glow flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-lg font-semibold text-foreground mb-2 tracking-tight">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

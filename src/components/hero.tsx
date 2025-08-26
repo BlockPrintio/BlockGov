@@ -12,24 +12,24 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="text-left max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-              <span className="block text-foreground">Block</span>
-              <span className="block bg-gradient-hero bg-clip-text text-transparent" style={{ WebkitTextFillColor: "initial", color: "inherit" }}>
-                Governance.
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+              <span className="block text-foreground">Cardano</span>
+              <span className="block bg-gradient-hero bg-clip-text text-transparent">
+                Governance, reimagined.
               </span>
             </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              A place to explore Cardano Governance.
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+              Explore Project Catalyst proposals, connect your wallet, and contribute to the future of Cardano.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/explore" passHref>
-                <Button variant="hero" size="xl" className="text-lg">
+              <Link href="/explorer" passHref>
+                <Button variant="hero" size="xl" className="text-base md:text-lg">
                   Start Exploring
                 </Button>
               </Link>
-              <Button size="xl" className="text-lg">
+              <Button size="xl" variant="outline" className="text-base md:text-lg">
                 Learn More
               </Button>
             </div>
@@ -38,14 +38,12 @@ const Hero = () => {
           {/* Right Content - Gradient Flower */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              <img
-                // src={gradientFlower.src}
-                alt="Governance Illustration"
-                className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain animate-pulse"
-              />
-              {/* Additional floating elements */}
-              <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-primary rounded-full opacity-20 animate-bounce"></div>
-              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-secondary rounded-full opacity-30 animate-bounce delay-300"></div>
+              <div className="w-96 h-96 lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-hero opacity-80 blur-2xl" />
+              <div className="absolute inset-0 grid place-items-center">
+                <div className="w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-2xl bg-card/40 backdrop-blur-xl border border-border/60 shadow-elegant animate-float" />
+              </div>
+              <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-primary rounded-full opacity-30 animate-float"></div>
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-secondary rounded-full opacity-40 animate-float [animation-delay:300ms]"></div>
             </div>
           </div>
         </div>
