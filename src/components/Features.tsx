@@ -52,15 +52,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="group border-border/60 bg-card/40 backdrop-blur-lg hover:bg-card/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant"
+              className="group border-border/60 bg-card/40 backdrop-blur-lg hover:bg-card/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-elegant hover:border-primary/20"
             >
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-primary shadow-glow flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-primary shadow-glow flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 tracking-tight">
+                <h3 className="text-lg font-semibold text-foreground mb-3 tracking-tight group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
