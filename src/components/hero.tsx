@@ -11,16 +11,16 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
-          <div className="text-left max-w-2xl">
+          <div className="text-left max-w-2xl animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
-              <span className="block text-foreground">Cardano</span>
-              <span className="block bg-gradient-hero bg-clip-text text-transparent">
+              <span className="block text-foreground animate-slide-in">Cardano</span>
+              <span className="block bg-gradient-hero bg-clip-text text-transparent animate-slide-in" style={{ animationDelay: '200ms' }}>
                 Governance, reimagined.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
-              Explore Project Catalyst proposals, connect your wallet, and contribute to the future of Cardano.
+              Unlock the power of Cardano governance. Discover, interact, and participate in one seamless tool designed for an empowered community.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -40,10 +40,20 @@ const Hero = () => {
             <div className="relative">
               <div className="w-96 h-96 lg:w-[520px] lg:h-[520px] rounded-full bg-gradient-hero opacity-80 blur-2xl" />
               <div className="absolute inset-0 grid place-items-center">
-                <div className="w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-2xl bg-card/40 backdrop-blur-xl border border-border/60 shadow-elegant animate-float" />
+                <div className="w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-2xl bg-card/40 backdrop-blur-xl border border-border/60 shadow-elegant animate-float">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <img
+                        src="/"
+                        className="w-130 h-130"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-primary rounded-full opacity-30 animate-float"></div>
               <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-secondary rounded-full opacity-40 animate-float [animation-delay:300ms]"></div>
+              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-accent rounded-full opacity-50 animate-float [animation-delay:600ms]"></div>
             </div>
           </div>
         </div>

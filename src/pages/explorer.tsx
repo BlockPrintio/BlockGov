@@ -135,12 +135,16 @@ const Explore = () => {
 
           {/* Articles Feed */}
           <div className="space-y-6">
-            {articles.map((article) => (
-              <Card key={article.id} className="overflow-hidden hover:shadow-elegant transition-all duration-300 border-border/50">
+            {articles.map((article, index) => (
+              <Card key={article.id} className="group overflow-hidden hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-primary/20 hover:-translate-y-1 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     {/* Author Avatar */}
-        
+                    <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0 shadow-glow">
+                      <span className="text-white font-semibold text-sm">
+                        {article.author.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
@@ -182,29 +186,33 @@ const Explore = () => {
                       {/* Engagement */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-6">
-                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
-                            <Heart className="w-4 h-4" />
-                            <span className="text-sm">{article.engagement.likes}</span>
+                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-red-500 hover:scale-110 transition-all duration-200 group/like">
+                            <Heart className="w-4 h-4 group-hover/like:fill-current" />
+                            <span className="text-sm font-medium">{article.engagement.likes}</span>
                           </button>
-                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-200 group/comment">
                             <MessageCircle className="w-4 h-4" />
-                            <span className="text-sm">{article.engagement.comments}</span>
+                            <span className="text-sm font-medium">{article.engagement.comments}</span>
                           </button>
-                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
+                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-green-500 hover:scale-110 transition-all duration-200 group/share">
                             <Share className="w-4 h-4" />
-                            <span className="text-sm">{article.engagement.shares}</span>
+                            <span className="text-sm font-medium">{article.engagement.shares}</span>
                           </button>
-                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors">
-                            <Bookmark className="w-4 h-4" />
-                            <span className="text-sm">{article.engagement.bookmarks}</span>
+                          <button className="flex items-center space-x-1 text-muted-foreground hover:text-yellow-500 hover:scale-110 transition-all duration-200 group/bookmark">
+                            <Bookmark className="w-4 h-4 group-hover/bookmark:fill-current" />
+                            <span className="text-sm font-medium">{article.engagement.bookmarks}</span>
                           </button>
                         </div>
                       </div>
                     </div>
 
                     {/* Thumbnail */}
-                    <div className="w-20 h-16 bg-muted rounded-lg flex-shrink-0 overflow-hidden">
-                      <div className="w-full h-full bg-gradient-accent opacity-20"></div>
+                    <div className="w-24 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex-shrink-0 overflow-hidden border border-border/30 shadow-sm">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-full bg-gradient-primary/30 flex items-center justify-center">
+                          <Play className="w-4 h-4 text-primary" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
