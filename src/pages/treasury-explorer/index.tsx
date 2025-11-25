@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import Navbar from "~/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
@@ -9,7 +10,6 @@ import {
   DollarSign,
   Gift,
   Flame,
-  Send,
   Info,
   TrendingUp,
   TrendingDown,
@@ -28,20 +28,13 @@ import {
   ExternalLink,
   QrCode,
   Download,
-  Settings,
   Eye,
   EyeOff,
   Activity,
   Zap,
-  Target,
   Award,
   Building2,
-  Globe,
-  Code,
-  Link as LinkIcon,
-  ChevronRight,
-  PlayCircle,
-  PauseCircle
+  Code
 } from "lucide-react";
 
 type TabType = "overview" | "applications" | "spends" | "proposals" | "tips" | "bounties" | "transfers";
@@ -276,9 +269,9 @@ const TreasuryExplorer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Home Link */}
           <div className="mb-4">
-            <a href="/" className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/" className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors">
               Home
-            </a>
+            </Link>
           </div>
 
           {/* Global Search Bar */}

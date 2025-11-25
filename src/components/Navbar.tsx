@@ -2,6 +2,7 @@ import { Search, Menu, Wallet } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";  
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -16,9 +17,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-              <img
+              <Image
                 src="/blockprint-logo.png"
                 alt="BlockGov logo"
+                width={48}
+                height={48}
                 className="w-12 h-12"
               />
             <span className="text-lg md:text-xl font-bold tracking-tight text-foreground">BlockGov</span>

@@ -1,5 +1,6 @@
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 // import gradientFlower from "~/assets/gradient-flower.png";
 
 const Hero = () => {
@@ -43,9 +44,12 @@ const Hero = () => {
                 <div className="w-72 h-72 lg:w-[420px] lg:h-[420px] rounded-2xl bg-card/40 backdrop-blur-xl border border-border/60 shadow-elegant animate-float">
                   <div className="w-full h-full flex items-center justify-center">
                     <div className="text-center">
-                      <img
-                        src="/"
-                        className="w-130 h-130"
+                      <Image
+                        src="/ada-dot.png"
+                        alt="Cardano ADA"
+                        width={130}
+                        height={130}
+                        className="w-32 h-32"
                       />
                     </div>
                   </div>
